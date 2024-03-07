@@ -109,6 +109,20 @@ def login():
     
     return jsonify({"status":"success","message":"User logged in successfully"}), 200    
         
+@app.route('/test_num',methods=['GET'])
+def test_num():
+    num =[]
+    
+    
+    for i in range(10):
+        num.append('123456789' + str(i))    
+        
+    num.append('123')
+    num.append('7489984216')
+    
+    return jsonify({"status":"success","message":num}), 200       
+ 
+ 
  
 @app.route('/get-profile', methods=['GET'])
 def get_profile():
